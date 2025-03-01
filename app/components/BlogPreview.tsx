@@ -1,9 +1,9 @@
-interface BlogProps {
+interface BlogPreviewProps {
     title: string;
     content: string;
 }
 
-const Blog = ({ title, content }: BlogProps) => {
+const BlogPreview = ({ title, content }: BlogPreviewProps) => {
     return (
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-2">{title}</h2>
@@ -12,4 +12,4 @@ const Blog = ({ title, content }: BlogProps) => {
     );
   };
   
-export default Blog;
+export default BlogPreview;

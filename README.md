@@ -1,4 +1,11 @@
-Hi! This is Amor. 
+# Useful links
+
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React](https://react.dev/learn)
+- [Next.js](https://nextjs.org/docs)
+- [Font Awsome](https://fontawesome.com/search?ic=free)
+
+--- 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

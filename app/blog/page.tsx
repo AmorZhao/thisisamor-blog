@@ -1,17 +1,17 @@
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
-import Blog from "../components/Blog";
+import BlogPreview from "../components/BlogPreview";
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen flex">
-      <Sidebar />
-      <div className="flex flex-col flex-1">
-        <Header />
-        <main className="flex-1 p-8">
+    <div>
+      <Header currentPage="Blog"/>
+      <div className="flex flex-1">
+        <main className="w-4/5 p-8">
           <h1 className="text-2xl font-bold mb-4">Blog</h1>
-          <Blog title="First Blog Post" content="This is the content of the first blog post." />
-          <Blog title="Second Blog Post" content="This is the content of the second blog post." />
+          <BlogPreview 
+            title="First Blog Post" 
+            content="This is the content of the first blog post." 
+          />
         </main>
       </div>
     </div>
