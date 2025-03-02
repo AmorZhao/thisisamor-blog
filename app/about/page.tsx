@@ -28,7 +28,7 @@ export default function About() {
             <br/>
           <h1 className="text-2xl font-noto-semibold mb-4">Friends | 友链</h1>
             <p>
-              <span title="You'll be able to visit it when she finally sets it up someday"><i className="fa-regular fa-heart"></i> Daisy&apos;s homepage</span>
+              <a href="https://xiaorandaisyyu.github.io"><i className="fa-regular fa-heart"></i> Daisy&apos;s homepage</a>
             </p>
           </div>
         </main>
