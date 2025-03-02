@@ -48,25 +48,28 @@ return (
       />
       </Link>
 
-      <button 
-      className="md:hidden p-2" 
-      onClick={() => setMenuOpen(!menuOpen)}
-      >
-      {menuOpen ? <X size={20} /> : <Menu size={20} />}
-      </button>
+      <div className="md:hidden flex items-center space-x-2">
+        <ThemeToggle />
+        <button 
+          className="p-2" 
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+      </div>
 
       {menuOpen && (
-      <div className="absolute top-16 left-0 w-full shadow-lg flex flex-col items-center p-4 md:hidden">
+      <div className="absolute top-16 left-0 w-full shadow-lg flex flex-col items-center p-4 md:hidden bg-white opacity-100">
         <Link href="/" className="py-2" onClick={() => setMenuOpen(false)}>Home</Link>
-        <div className="relative"></div>
         <Link href="/" className="py-2" onClick={() => setBlogDropdownOpen(!blogDropdownOpen)}>Blog</Link>
         {blogDropdownOpen && (
-        <div className="w-full flex flex-col items-center p-4 text-sm font-light ">
+        <div className="w-full flex flex-col items-center p-4 text-sm font-light">
           <Link href="/blog/engipost" className="py-2" onClick={() => setMenuOpen(false)}>Engineering</Link>
           <Link href="/blog/diary" className="py-2" onClick={() => setMenuOpen(false)}>Life journal</Link>
         </div>
         )}
-        <Link href="/album" className="hover:underline">Album</Link>
+        <Link href="/album" className="py-2" onClick={() => setMenuOpen(false)}>Album</Link>
+        <Link href="/archive" className="py-2" onClick={() => setMenuOpen(false)}>Archive</Link>
         <Link href="/about" className="py-2" onClick={() => setMenuOpen(false)}>About</Link>
         <div className="flex space-x-4 mt-4">
         <a href="https://github.com/AmorZhao" target="_blank" rel="noopener noreferrer" title="GitHub">
