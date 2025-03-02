@@ -4,6 +4,8 @@
 - [React](https://react.dev/learn)
 - [Next.js](https://nextjs.org/docs)
 - [Font Awsome](https://fontawesome.com/search?ic=free)
+- [Google fonts](https://fonts.google.com/)
+
 
 --- 
 

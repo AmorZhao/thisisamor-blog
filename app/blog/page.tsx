@@ -6,8 +6,8 @@ export default function BlogPage() {
     <div>
       <Header currentPage="Blog"/>
       <div className="flex flex-1">
-        <main className="w-4/5 p-8">
-          <h1 className="text-2xl font-bold mb-4">Blog</h1>
+        <main className="w-4/5 p-8 font-noto">
+          <h1 className="text-2xl font-noto-semibold mb-4">Blog</h1>
           <BlogPreview 
             title="First Blog Post" 
             content="This is the content of the first blog post." 

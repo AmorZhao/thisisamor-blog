@@ -2,8 +2,9 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
+
 const ThemeToggle = () => {
-  const { theme, setTheme, systemTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -12,21 +13,22 @@ const ThemeToggle = () => {
 
   if (!mounted) return null;
 
-  // Ensure "system" uses actual system preference
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
   return (
-    <button
-      type="button"
-      onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-      className="p-2"
-    >
-      {currentTheme === "dark" ? (
-        <i className="fa-solid fa-sun"></i>
-      ) : (
-        <i className="fa-solid fa-moon"></i>
-      )}
-    </button>
+    <div>
+      <button
+        type="button"
+        onClick={() => {setTheme(theme === "dark" ? "light" : "dark"); 
+          console.log(theme);
+        }}
+        className="theme-toggle-button"
+      >
+        {theme === "dark" ? (
+          <i className="fa-solid fa-moon"></i>
+        ) : (
+          <i className="fa-solid fa-sun"></i>
+        )}
+      </button>
+    </div>
   );
 };
 

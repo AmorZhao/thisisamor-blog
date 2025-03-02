@@ -1,117 +1,32 @@
+@import url("./fonts.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-color: #ffffff;
+  --text-color: #000000;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-@font-face {
-  font-family: "Lora";
-  src: url("/fonts/Lora/static/Lora-Regular.ttf") format("truetype"), 
-      url("/fonts/Lora/static/Lora-Italic.ttf") format("truetype");
-  font-weight: 400 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Lora-Medium";
-  src: url("/fonts/Lora/static/Lora-Medium.ttf") format("truetype"),
-      url("/fonts/Lora/static/Lora-MediumItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Lora-SemiBold";
-  src: url("/fonts/Lora/static/Lora-SemiBold.ttf") format("truetype"),
-        url("/fonts/Lora/static/Lora-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Lora-Bold";
-  src: url("/fonts/Lora/static/Lora-Bold.ttf") format("truetype"), 
-        url("/fonts/Lora/static/Lora-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto_Serif_TC-ExtraLight";
-  src: url("/fonts/Noto_Serif_TC/NotoSerifTC-ExtraLight.otf") format("opentype");
-  font-weight: 100;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto_Serif_TC-Light";
-  src: url("/fonts/Noto_Serif_TC/NotoSerifTC-Light.otf") format("opentype");
-  font-weight: 300;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto_Serif_TC";
-  src: url("/fonts/Noto_Serif_TC/NotoSerifTC-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto_Serif_TC-Medium";
-  src: url("/fonts/Noto_Serif_TC/NotoSerifTC-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto_Serif_TC-SemiBold";
-  src: url("/fonts/Noto_Serif_TC/NotoSerifTC-SemiBold.otf") format("opentype");
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto_Serif_TC-Bold";
-  src: url("/fonts/Noto_Serif_TC/NotoSerifTC-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto_Serif_TC-Black";
-  src: url("/fonts/Noto_Serif_TC/NotoSerifTC-Black.otf") format("opentype");
-  font-weight: 900;
-  font-display: swap;
-}
-
 
 body {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
-  font-family: 'Lora', 'Noto_Serif_TC', serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] body{
+  background-color: #000;
+  color: #fff;
 }
 
 header {
+  color: #000;
+  background-color: #fff;
+  font-family: 'Lora-Bold', 'Noto_Serif_SC-Bold', serif;
+}
+
+[data-theme="dark"] header {
+  color: #fff;
   background-color: #2a2a2a;
-  font-family: 'Lora-Bold', 'Noto_Serif_TC-Bold', serif;
-}
-
-aside {
-  background-color: #212224;
-  font-family: 'Lora-Bold', 'Noto_Serif_TC-Bold', serif;
-}
-
-main {
-  background-color: #1a1a1a;
+  opacity: 0.9;
+  font-family: 'Lora-Bold', 'Noto_Serif_SC-Bold', serif;
 }

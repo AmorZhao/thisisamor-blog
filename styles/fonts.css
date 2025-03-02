@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/Lora/static/Lora-Regular.ttf") format("truetype"), 
+      url("/fonts/Lora/static/Lora-Italic.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora-Medium";
+  src: url("/fonts/Lora/static/Lora-Medium.ttf") format("truetype"),
+      url("/fonts/Lora/static/Lora-MediumItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora-SemiBold";
+  src: url("/fonts/Lora/static/Lora-SemiBold.ttf") format("truetype"),
+        url("/fonts/Lora/static/Lora-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora-Bold";
+  src: url("/fonts/Lora/static/Lora-Bold.ttf") format("truetype"), 
+        url("/fonts/Lora/static/Lora-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto_Serif_SC-ExtraLight";
+  src: url("/fonts/Noto_Serif_SC/static/NotoSerifSC-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto_Serif_SC-Light";
+  src: url("/fonts/Noto_Serif_SC/static/NotoSerifSC-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto_Serif_SC";
+  src: url("/fonts/Noto_Serif_SC/static/NotoSerifSC-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto_Serif_SC-Medium";
+  src: url("/fonts/Noto_Serif_SC/static/NotoSerifSC-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto_Serif_SC-SemiBold";
+  src: url("/fonts/Noto_Serif_SC/static/NotoSerifSC-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto_Serif_SC-Bold";
+  src: url("/fonts/Noto_Serif_SC/static/NotoSerifSC-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto_Serif_SC-ExtraBold";
+  src: url("/fonts/Noto_Serif_SC/static/NotoSerifSC-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto_Serif_SC-Black";
+  src: url("/fonts/Noto_Serif_SC/static/NotoSerifSC-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+}

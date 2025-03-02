@@ -5,6 +5,7 @@ import { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 import { Menu, X } from "lucide-react"; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import ThemeToggle from "./ThemeToggle";
 
 interface HeaderProps {
   currentPage?: string;
@@ -17,7 +18,7 @@ const Header = ({ currentPage }: HeaderProps) => {
     `hover:underline ${currentPage === page ? "underline text-blue-300" : ""}`;
 
 return (
-    <header className="flex justify-between items-center p-3 px-4 font-lora font-bold bg-black-500 text-white shadow-md">
+    <header className="flex justify-between items-center p-3 px-4 font-lora font-bold shadow-md">
       <nav className="hidden md:flex items-center gap-6">
       <Link href="/" className={linkClasses("home")}>Home</Link>
       <DropdownMenu 
@@ -33,9 +34,9 @@ return (
       <Link href="/about" className={linkClasses("about")}>About</Link>
       </nav>
 
-      {/* <div className="hidden md:flex ml-auto space-x-4 mr-4">
+      <div className="hidden md:flex ml-auto space-x-4 mr-4">
       <ThemeToggle />
-      </div> */}
+      </div>
 
       <Link href="/" className="flex items-center">
       <Image 
@@ -55,7 +56,7 @@ return (
       </button>
 
       {menuOpen && (
-      <div className="absolute top-16 left-0 w-full bg-gray-800 bg-opacity-90 shadow-lg flex flex-col items-center p-4 md:hidden">
+      <div className="absolute top-16 left-0 w-full shadow-lg flex flex-col items-center p-4 md:hidden">
         <Link href="/" className="py-2" onClick={() => setMenuOpen(false)}>Home</Link>
         <div className="relative"></div>
         <Link href="/" className="py-2" onClick={() => setBlogDropdownOpen(!blogDropdownOpen)}>Blog</Link>

@@ -6,9 +6,11 @@ export default function About() {
       <Header currentPage="about" />
       <div className="flex flex-1">
         <main className="p-8">
-          <h1 className="text-2xl font-bold mb-4">About | 关于</h1>
+          <h1 className="text-2xl font-noto-semibold mb-4">About | 关于</h1>
+          <div className="font-noto">
             <p>Hi! This is Amor.</p>
             <br />
+            <p>Find me via these links! :3</p>
             <div className="mb-4">
               <div>
                 <a href="https://github.com/AmorZhao"><i  className="fab fa-github"></i> GitHub</a>
@@ -24,10 +26,11 @@ export default function About() {
               </div>
             </div>
             <br/>
-          <h1 className="text-2xl font-bold mb-4">Friends | 友链</h1>
+          <h1 className="text-2xl font-noto-semibold mb-4">Friends | 友链</h1>
             <p>
               <span title="You'll be able to visit it when she finally sets it up someday"><i className="fa-regular fa-heart"></i> Daisy&apos;s homepage</span>
             </p>
+          </div>
         </main>
       </div>
     </div>

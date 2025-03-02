@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,14 +25,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel='shortcut icon' type='image/x-icon' href='icons/A.jfif' />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="flex justify-center items-center">
           <div className="w-full max-w-[900px]  md:w-full lg:w-2/3 flex flex-col mb-auto content-wrap ">
+          <ThemeProvider>
             {children}
+          </ThemeProvider>
           <Footer />
           </div>
         </div>
