@@ -4,6 +4,19 @@
     color: #333;
 }
 
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body pre,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body table,
+.markdown-body hr {
+    margin-bottom: 20px;
+}
+
 .markdown-body h1 {
     font-size: 2em;
     border-bottom: 2px solid #ddd;
@@ -63,9 +76,9 @@
 }
 
 .markdown-body table {
-    width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 20px auto;
+    width: auto;
 }
 .markdown-body th,
 .markdown-body td {
