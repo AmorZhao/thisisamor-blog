@@ -1,4 +1,6 @@
 @import url("./fonts.css");
+@import url("./markdown.css"); 
+@import url("./colors.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,22 +13,70 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  font-size: 1rem;
 }
 
 [data-theme="dark"] body{
-  background-color: #000;
+  background-color: #222;
   color: #fff;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
 }
 
 header {
   color: #000;
   background-color: #fff;
   font-family: 'Lora-Bold', 'Noto_Serif_SC-Bold', serif;
+  border-radius: 0.3rem; 
 }
 
 [data-theme="dark"] header {
   color: #fff;
   background-color: #2a2a2a;
-  opacity: 0.9;
   font-family: 'Lora-Bold', 'Noto_Serif_SC-Bold', serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.3rem; 
+}
+
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
 }

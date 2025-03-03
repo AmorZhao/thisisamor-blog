@@ -1,0 +1,23 @@
+.custom-blue {
+    color: #3f7ebd; 
+}
+
+[data-theme="dark"] .custom-blue {
+    color: #c6e3ff;
+}
+
+.custom-gray {
+    color: #666;
+}
+
+[data-theme="dark"] .custom-gray {
+    color: #aaa;
+}
+
+.custom-border {
+    border: 1px solid #ccc;
+}
+
+[data-theme="dark"] .custom-border {
+    border-color: #444;
+}

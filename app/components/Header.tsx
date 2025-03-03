@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import DropdownMenu from "./DropdownMenu";
 import { Menu, X } from "lucide-react"; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import ThemeToggle from "./ThemeToggle";
@@ -12,23 +11,15 @@ interface HeaderProps {
 }
 const Header = ({ currentPage }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [blogDropdownOpen, setBlogDropdownOpen] = useState(false);
 
   const linkClasses = (page: string) =>
-    `hover:underline ${currentPage === page ? "underline text-blue-300" : ""}`;
+    `hover:underline ${currentPage === page ? "underline custom-blue" : ""}`;
 
 return (
     <header className="flex justify-between items-center p-3 px-4 font-lora font-bold shadow-md">
-      <nav className="hidden md:flex items-center gap-6">
+      <nav className="hidden md:flex items-center gap-6 ml-4">
       <Link href="/" className={linkClasses("home")}>Home</Link>
-      <DropdownMenu 
-        title="Blog" 
-        items={[
-        { label: "Engineering", href: "/blog/engipost" },
-        { label: "Life journal", href: "/blog/diary" },
-        ]}
-        currentPage={currentPage}
-      />
+      <Link href="/blog" className={linkClasses("blog")}>Blog</Link>
       <Link href="/album" className={linkClasses("album")}>Album</Link>
       <Link href="/archive" className={linkClasses("archive")}>Archive</Link>
       <Link href="/about" className={linkClasses("about")}>About</Link>
@@ -45,6 +36,7 @@ return (
         width={40} 
         height={40} 
         className="rounded-lg cursor-pointer"
+        style={{ width: "auto", height: "auto" }}
       />
       </Link>
 
@@ -59,18 +51,12 @@ return (
       </div>
 
       {menuOpen && (
-      <div className="absolute top-16 left-0 w-full shadow-lg flex flex-col items-center p-4 md:hidden bg-white opacity-100">
-        <Link href="/" className="py-2" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link href="/" className="py-2" onClick={() => setBlogDropdownOpen(!blogDropdownOpen)}>Blog</Link>
-        {blogDropdownOpen && (
-        <div className="w-full flex flex-col items-center p-4 text-sm font-light">
-          <Link href="/blog/engipost" className="py-2" onClick={() => setMenuOpen(false)}>Engineering</Link>
-          <Link href="/blog/diary" className="py-2" onClick={() => setMenuOpen(false)}>Life journal</Link>
-        </div>
-        )}
-        <Link href="/album" className="py-2" onClick={() => setMenuOpen(false)}>Album</Link>
-        <Link href="/archive" className="py-2" onClick={() => setMenuOpen(false)}>Archive</Link>
-        <Link href="/about" className="py-2" onClick={() => setMenuOpen(false)}>About</Link>
+      <header className="absolute top-16 left-0 w-full shadow-lg flex flex-col items-center p-4 md:hidden">
+        <Link href="/" className="py-4 w-full text-center" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link href="/blog" className="py-4 w-full text-center" onClick={() => setMenuOpen(false)}>Blog</Link>
+        <Link href="/album" className="py-4 w-full text-center" onClick={() => setMenuOpen(false)}>Album</Link>
+        <Link href="/archive" className="py-4 w-full text-center" onClick={() => setMenuOpen(false)}>Archive</Link>
+        <Link href="/about" className="py-4 w-full text-center" onClick={() => setMenuOpen(false)}>About</Link>
         <div className="flex space-x-4 mt-4">
         <a href="https://github.com/AmorZhao" target="_blank" rel="noopener noreferrer" title="GitHub">
           <i className="fab fa-github"></i>
@@ -82,7 +68,7 @@ return (
           <i className="far fa-envelope"></i>
         </a>
         </div>
-      </div>
+      </header>
       )}
     </header>
   );
