@@ -13,33 +13,33 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.875rem; 
 }
 
-[data-theme="dark"] body{
+[data-theme="dark"] body {
   background-color: #222;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.875rem; 
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem; 
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem; 
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem; 
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1rem; 
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 0.875rem; 
 }
 
 header {
@@ -79,4 +79,9 @@ ul {
 ol {
   list-style-type: decimal;
   padding-left: 20px;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.25px;
 }

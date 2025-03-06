@@ -44,3 +44,5 @@ next-env.d.ts
 
 source/.obsidian/*
 !source/.obsidian/themes/
+
+source/drafts/*
