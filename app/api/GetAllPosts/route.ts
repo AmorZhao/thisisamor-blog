@@ -2,15 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { getAllPosts } from "@/lib/md";
 import { createClient } from "@libsql/client";
 
-interface DiaryPost {
-  slug: string;
-  title: string;
-  description: string;
-  date: string;
-  category: string;
-  tags: string[];
-}
-
 interface DatabasePost {
   slug: string;
   title: string;
@@ -43,17 +34,6 @@ export async function GET(request: NextRequest)
   {    
     try 
     {
-      // should not be a thing but for now just keep it
-      const diaryFromSource = await getAllPosts("source/diaries");  
-      const formattedDiaryFromSource = diaryFromSource.map((diary: DiaryPost) => ({
-        slug: diary.slug,
-        title: diary.title,
-        description: "",
-        date: diary.date,
-        category: "Uncategorized",
-        tags: diary.tags || []
-      }));
-
       const turso_client = createClient({
         url: process.env.TURSO_DATABASE_URL as string,
         authToken: process.env.TURSO_AUTH_TOKEN as string
@@ -73,8 +53,7 @@ export async function GET(request: NextRequest)
           tags: [],
       }));
       
-      const combinedDiaries = [...formattedDiaryFromSource, ...formattedDiaryFromDatabase];
-      const sortedDiaries = combinedDiaries.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      const sortedDiaries = formattedDiaryFromDatabase.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
       return NextResponse.json(sortedDiaries);
     }
