@@ -6,6 +6,10 @@
 - [Font Awsome](https://fontawesome.com/search?ic=free)
 - [Google fonts](https://fonts.google.com/)
 - [shadcn](https://ui.shadcn.com/docs)
+- [Framer-motion](https://motion.dev/docs)
+- [Turso](https://docs.turso.tech/introduction)
+- [SQLite](https://www.sqlite.org/docs.html)
+- [Cloudflare R2](https://developers.cloudflare.com/r2/)
 
 --- 
 

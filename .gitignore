@@ -42,7 +42,12 @@ next-env.d.ts
 
 .vscode/
 
+# source
 source/.obsidian/*
 !source/.obsidian/themes/
-
 source/drafts/*
+
+# database
+database/**/*.db
+database/**/*_dump.sql
+database/old-blogs/*
