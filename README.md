@@ -10,6 +10,7 @@
 - [Turso](https://docs.turso.tech/introduction)
 - [SQLite](https://www.sqlite.org/docs.html)
 - [Cloudflare R2](https://developers.cloudflare.com/r2/)
+- [dopely colors](https://colors.dopely.top/color-pedia/)
 
 --- 
 
