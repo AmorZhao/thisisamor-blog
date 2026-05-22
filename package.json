@@ -55,7 +55,9 @@
     "@tailwindcss/oxide-linux-x64-gnu": "4.3.0",
     "@tailwindcss/oxide-linux-x64-musl": "4.3.0",
     "@unrs/resolver-binding-linux-x64-gnu": "1.12.2",
-    "@unrs/resolver-binding-linux-x64-musl": "1.12.2"
+    "@unrs/resolver-binding-linux-x64-musl": "1.12.2",
+    "@libsql/linux-x64-gnu": "0.5.29",
+    "@libsql/linux-x64-musl": "0.5.29"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
