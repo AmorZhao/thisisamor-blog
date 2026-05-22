@@ -53,7 +53,7 @@
     overflow-x: auto;
 }
 .markdown-body pre code[class*="language-"] {
-    @apply text-black;
+    color: #000;
 }
 
 .markdown-body code {
@@ -134,7 +134,7 @@
     background: #4a4a4a;
 }
 [data-theme="dark"] .markdown-body pre code[class*="language-"] {
-    @apply text-white;
+    color: #fff;
 }
 
 [data-theme="dark"] .markdown-body code {

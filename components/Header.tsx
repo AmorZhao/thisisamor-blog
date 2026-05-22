@@ -32,11 +32,12 @@ return (
       <Link href="/" className="flex items-center">
       <Image 
         src="/images/avatar.jpg" 
-        alt="Profile" 
-        width={40} 
-        height={40} 
+        alt="Profile"
+        width={40}
+        height={40}
         className="rounded-lg cursor-pointer"
-        style={{ width: "auto", height: "auto" }}
+        loading="eager"
+        style={{ width: 40, height: 40 }}
       />
       </Link>
 
