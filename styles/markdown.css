@@ -113,40 +113,40 @@
 
 /* ----- Dark theme ----- */
 
-[data-theme="dark"] .markdown-body {
+[data-theme*="dark"] .markdown-body {
     color: #ccc;
 }
 
-[data-theme="dark"] .markdown-body h1 {
+[data-theme*="dark"] .markdown-body h1 {
     border-bottom: 2px solid #444;
 }
-[data-theme="dark"] .markdown-body h2 {
+[data-theme*="dark"] .markdown-body h2 {
     border-bottom: 1px solid #444;
 }
 
-[data-theme="dark"] .markdown-body blockquote {
+[data-theme*="dark"] .markdown-body blockquote {
     border-left: 4px solid #666;
     color: #aaa;
     background: #2e2e2e;
 }
 
-[data-theme="dark"] .markdown-body pre {
+[data-theme*="dark"] .markdown-body pre {
     background: #4a4a4a;
 }
-[data-theme="dark"] .markdown-body pre code[class*="language-"] {
+[data-theme*="dark"] .markdown-body pre code[class*="language-"] {
     color: #fff;
 }
 
-[data-theme="dark"] .markdown-body code {
+[data-theme*="dark"] .markdown-body code {
     background: #4a4a4a;
     color: #c6e3ff;
 }
 
-[data-theme="dark"] .markdown-body a {
+[data-theme*="dark"] .markdown-body a {
     color: #cbe6ff;
 }
 
-[data-theme="dark"] .markdown-body table {
+[data-theme*="dark"] .markdown-body table {
     border-color: #444;
     width: auto;
     margin-left: auto;
@@ -155,10 +155,10 @@
     display: block;
     overflow-x: auto;
 }
-[data-theme="dark"] .markdown-body th {
+[data-theme*="dark"] .markdown-body th {
     background: #3e3e3e;
 }
 
-[data-theme="dark"] .markdown-body hr {
+[data-theme*="dark"] .markdown-body hr {
     border-top: 1px solid #444;
 }

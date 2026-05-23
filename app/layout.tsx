@@ -32,7 +32,11 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="flex justify-center items-center">
           <div className="w-full max-w-[900px]  md:w-full lg:w-2/3 flex flex-col mb-auto content-wrap ">
-          <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
+          <ThemeProvider
+            attribute="data-theme"
+            defaultTheme="light-modern"
+            themes={["light-modern", "dark-modern", "light-y2k", "dark-y2k"]}
+          >
             {children}
             <Footer />
           </ThemeProvider>

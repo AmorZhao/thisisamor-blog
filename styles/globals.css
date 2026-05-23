@@ -45,7 +45,7 @@ body {
   font-size: 0.875rem; 
 }
 
-[data-theme="dark"] body {
+[data-theme*="dark"] body {
   background-color: #222;
   color: #fff;
   font-size: 0.875rem; 
@@ -78,7 +78,7 @@ header {
   border-radius: 0.3rem; 
 }
 
-[data-theme="dark"] header {
+[data-theme*="dark"] header {
   color: #fff;
   background-color: #2a2a2a;
   font-family: 'Lora-Bold', 'Noto_Serif_SC-Bold', serif;
@@ -150,7 +150,7 @@ a:hover {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
-  [data-theme="dark"] {
+  [data-theme*="dark"] {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
@@ -206,21 +206,21 @@ a:hover {
   initial-value: #000000;
 }
 
-@custom-variant y2k (&:where([data-style="y2k"], [data-style="y2k"] *));
+@custom-variant y2k (&:where([data-theme*="y2k"], [data-theme*="y2k"] *));
 
-[data-style="y2k"] {
+[data-theme*="y2k"] {
   --background-color: #f5f0e8;
   --text-color: #1a1a2e;
   transition: background-color 300ms ease, color 300ms ease;
 }
 
-[data-style="y2k"][data-theme="dark"] {
+[data-theme*="y2k"][data-theme*="dark"] {
   --background-color: #0d0d1a;
   --text-color: #c8ffc8;
 }
 
 @layer base {
-  [data-style="y2k"] {
+  [data-theme*="y2k"] {
     --background: 40 30% 93%;
     --foreground: 230 35% 14%;
     --card: 40 25% 90%;
@@ -239,7 +239,7 @@ a:hover {
     --radius: 0rem;
   }
 
-  [data-style="y2k"][data-theme="dark"] {
+  [data-theme*="y2k"][data-theme*="dark"] {
     --background: 240 40% 8%;
     --foreground: 140 100% 90%;
     --card: 240 35% 12%;
@@ -259,18 +259,18 @@ a:hover {
   }
 }
 
-[data-style="y2k"] body,
-[data-style="y2k"] .markdown-body {
+[data-theme*="y2k"] body,
+[data-theme*="y2k"] .markdown-body {
   font-family: "Fusion Pixel", monospace;
 }
 
-[data-style="y2k"] header {
+[data-theme*="y2k"] header {
   font-family: "Fusion Pixel", monospace;
   border: 2px solid currentColor;
   border-radius: 0;
 }
 
-[data-style="y2k"] .custom-blue  { color: #2c5f8a; }
-[data-style="y2k"][data-theme="dark"] .custom-blue { color: #7fd4ff; }
-[data-style="y2k"] .custom-gray  { color: #5a5a7a; }
-[data-style="y2k"][data-theme="dark"] .custom-gray { color: #a0c0a0; }
+[data-theme*="y2k"] .custom-blue  { color: #2c5f8a; }
+[data-theme*="y2k"][data-theme*="dark"] .custom-blue { color: #7fd4ff; }
+[data-theme*="y2k"] .custom-gray  { color: #5a5a7a; }
+[data-theme*="y2k"][data-theme*="dark"] .custom-gray { color: #a0c0a0; }
