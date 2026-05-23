@@ -150,7 +150,7 @@ a:hover {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
-  .dark {
+  [data-theme="dark"] {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
@@ -192,3 +192,85 @@ a:hover {
   grid-template-columns: 1fr 2fr;
   gap: 20px;
 }
+
+
+@property --background-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ffffff;
+}
+
+@property --text-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #000000;
+}
+
+@custom-variant y2k (&:where([data-style="y2k"], [data-style="y2k"] *));
+
+[data-style="y2k"] {
+  --background-color: #f5f0e8;
+  --text-color: #1a1a2e;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+[data-style="y2k"][data-theme="dark"] {
+  --background-color: #0d0d1a;
+  --text-color: #c8ffc8;
+}
+
+@layer base {
+  [data-style="y2k"] {
+    --background: 40 30% 93%;
+    --foreground: 230 35% 14%;
+    --card: 40 25% 90%;
+    --card-foreground: 230 35% 14%;
+    --border: 30 15% 60%;
+    --input: 30 15% 60%;
+    --ring: 200 60% 40%;
+    --primary: 200 60% 35%;
+    --primary-foreground: 40 30% 95%;
+    --secondary: 40 20% 85%;
+    --secondary-foreground: 230 35% 14%;
+    --muted: 40 20% 85%;
+    --muted-foreground: 230 20% 40%;
+    --accent: 200 55% 40%;
+    --accent-foreground: 40 30% 95%;
+    --radius: 0rem;
+  }
+
+  [data-style="y2k"][data-theme="dark"] {
+    --background: 240 40% 8%;
+    --foreground: 140 100% 90%;
+    --card: 240 35% 12%;
+    --card-foreground: 140 100% 90%;
+    --border: 240 30% 30%;
+    --input: 240 30% 30%;
+    --ring: 190 100% 60%;
+    --primary: 140 100% 75%;
+    --primary-foreground: 240 40% 8%;
+    --secondary: 240 30% 18%;
+    --secondary-foreground: 140 100% 90%;
+    --muted: 240 30% 18%;
+    --muted-foreground: 140 60% 65%;
+    --accent: 190 100% 55%;
+    --accent-foreground: 240 40% 8%;
+    --radius: 0rem;
+  }
+}
+
+[data-style="y2k"] body,
+[data-style="y2k"] .markdown-body {
+  font-family: "Fusion Pixel", monospace;
+}
+
+[data-style="y2k"] header {
+  font-family: "Fusion Pixel", monospace;
+  border: 2px solid currentColor;
+  border-radius: 0;
+}
+
+[data-style="y2k"] .custom-blue  { color: #2c5f8a; }
+[data-style="y2k"][data-theme="dark"] .custom-blue { color: #7fd4ff; }
+[data-style="y2k"] .custom-gray  { color: #5a5a7a; }
+[data-style="y2k"][data-theme="dark"] .custom-gray { color: #a0c0a0; }
