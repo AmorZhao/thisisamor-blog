@@ -10,23 +10,23 @@ export default function About() {
           <div>
             <p className="mb-2">Hey! This is Amor.</p>
             <p className="mb-2">And welcome to my little blog&apos;s about page :3</p>
-            <p className="mb-2">I&apos;m currently a 4th year EIE (Electronic & information engineering) student at Imperial College London. I&apos;m 21, an ISTJ, and I enjoy things like coffee, reading, Formula 1, playing Go and blogging. I write a bit in both English and Mandarin, and I&apos;m slowly picking up Spanish and Korean. </p>
-            <p className="mb-2"><span className="font-noto-semibold">This isn&apos;t some academic site!</span> It&apos;s more like my little journal where I write about life, books, and whatever random interesting stuff. I like the feeling of eventually making sense of things through writing (and it&apos;s fun to look back at what happened years ago) - so instead of flooding my social media pages (introvert problems... ;-; I guess?), I made this space <span className="strikethrough">to spam however I want</span> where I can just be me.</p>
+            <p className="mb-2">I completed my master's in Electronic Engineering in 2025, and now work as a junior developer in Bristol. I enjoy things like coffee, reading, running, Formula 1, playing Go and blogging. I write a bit in both English and Mandarin, and I&apos;m slowly picking up Spanish and Korean. </p>
+            <p className="mb-2">This is like my little journal where I write about life, books, and whatever random interesting stuff. I like the feeling of writing and the "eventually making sense of things through writing" (and it&apos;s fun to look back at what happened years ago), so instead of flooding my social media pages (introvert problems... ;-;), I made this space <span className="strikethrough">to spam however I want</span> where I just be me.</p>
             <p className="mb-2">...if you are reading this, I hope you enjoy it! And let&apos;s be friends... 0w0</p>
             <br />
-            <p className="mb-2">None of my socials actually links back here:</p>
+            <p className="mb-2">Socials... (i.e. Amor, but not-so-Amor)</p>
               <div className="mb-4">
                 <div>
                   <a href="https://github.com/AmorZhao" target="_blank" rel="noopener noreferrer" className="custom-blue"><i  className="fab fa-github mr-2"></i>GitHub</a>
                 </div>
                 <div>
-                  <a href="https://instagram.com/amor.zh39/" target="_blank" rel="noopener noreferrer" className="custom-blue"><i className="fab fa-instagram mr-2.5"></i>Instagram</a>
+                  <a href="https://instagram.com/amor.zh39/" target="_blank" rel="noopener noreferrer" className="custom-blue"><i className="fab fa-instagram mr-2"></i>Instagram</a>
                 </div>
                 <div>
                   <a href="mailto:amor_7303@163.com" target="_blank" rel="noopener noreferrer" className="custom-blue"><i className="far fa-envelope mr-2"></i>Email</a>
                 </div>
                 <div>
-                  <a href="https://amor-zhao.notion.site/Amor-s-Dashboard-33d838340d45480980835d213c19ea5a" target="_blank" rel="noopener noreferrer" className="custom-blue"><i className="fa-solid fa-n mr-3"></i>Notion Dashboard</a>
+                  <a href="https://amor-zhao.notion.site/Amor-s-Dashboard-33d838340d45480980835d213c19ea5a" target="_blank" rel="noopener noreferrer" className="custom-blue"><i className="fa-solid fa-n mr-2"></i>Notion Dashboard</a>
                 </div>
               </div>
               <br />

@@ -17,9 +17,6 @@ export default function BlogPost({ params }: { params: Promise<Params> })
 {
   const { directory, slug } = use(params);
 
-  // console.log("Directory:", directory);
-  // console.log("Slug:", slug);
-
   interface DiaryData {
     title: string;
     content: string;
@@ -45,7 +42,6 @@ export default function BlogPost({ params }: { params: Promise<Params> })
       {    
         try 
         {
-          // console.log("base url: ", process.env.BASE_URL); 
           const url: string = `/api/GetPost?type=diary&slug=${slug}`;
           const response = await fetch(url, { method: "GET" });
 
@@ -54,7 +50,6 @@ export default function BlogPost({ params }: { params: Promise<Params> })
             throw new Error(`Server returned ${response.status}: ${response.statusText}`);
           }
           const rawData = (await response.json()).rows[0];
-          // console.log("Fetched data:", rawData);
           const formattedData = {
             title: rawData[1],
             content: rawData[3],
@@ -72,7 +67,6 @@ export default function BlogPost({ params }: { params: Promise<Params> })
       {
         try 
         {
-          // console.log("base url: ", process.env.BASE_URL); 
           const url: string = `/api/GetPost?type=post&slug=${slug}`;
           const response = await fetch(url, { method: "GET" });
 
@@ -81,7 +75,6 @@ export default function BlogPost({ params }: { params: Promise<Params> })
             throw new Error(`Server returned ${response.status}: ${response.statusText}`);
           }
           const rawData = (await response.json());
-          // console.log("Fetched data:", rawData);
           const formattedData = {
             title: rawData.data.title, 
             date: rawData.data.date, 
