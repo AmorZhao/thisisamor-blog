@@ -1,22 +1,16 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { WindowsMyComputer2, AfterDarkDeluxe, VisualStudioSUN } from "react-old-icons";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-      setMounted(true);
-    }, []);
-
-  if (!mounted) {
+  if (!theme) {
     return null;
   }
 
-  const isY2K = theme?.includes("y2k");
-  const isDark = theme?.includes("dark");
+  const isY2K = theme.includes("y2k");
+  const isDark = theme.includes("dark");
 
   const toggleStyle = () => {
     switch (theme) {

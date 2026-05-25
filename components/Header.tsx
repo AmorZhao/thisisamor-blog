@@ -3,12 +3,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; 
+import dynamic from "next/dynamic";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import ThemeToggle from "./ThemeToggle";
+
+const ThemeToggle = dynamic(() => import("./ThemeToggle"), { ssr: false });
 
 interface HeaderProps {
   currentPage?: string;
 }
+
 const Header = ({ currentPage }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
