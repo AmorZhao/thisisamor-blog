@@ -86,7 +86,7 @@ export default function BlogPost({ params }: { params: Promise<Params> }) {
   if (directory === "diaries") {
     return (
       <ClientThemeLayout currentPage="blog">
-        <main className="w-full p-8 font-noto">
+        <main className="w-full p-8">
           <article className="prose mx-auto">
             <div className="markdown-body">
               {diaryData ? (
@@ -112,7 +112,7 @@ export default function BlogPost({ params }: { params: Promise<Params> }) {
   if (directory === "posts") {
     return (
       <ClientThemeLayout currentPage="blog">
-        <main className="w-full p-8 font-noto">
+        <main className="w-full p-8">
           <article className="prose mx-auto">
             {postData ? (
               <div>

@@ -12,7 +12,7 @@ const BlogPreview = ({ title, description, date, category, tags, postType, link 
   if (postType === "posts") {
     return (
       <div className="mb-8 border custom-border rounded-lg p-4 shadow-sm">
-        <a href={`/blog/${postType}/${link}`} className="text-xl font-noto hover:underline">{title}</a>
+        <a href={`/blog/${postType}/${link}`} className="text-xl hover:underline">{title}</a>
         <div className="flex items-center space-x-8 ml-1 mt-3 text-sm custom-gray">
           <p><i className="fa-solid fa-calendar mr-2"></i>{new Date(date).toLocaleString("en-GB", { dateStyle: "short", timeStyle: "medium" })}</p>
           <p><i className="fa-solid fa-folder-closed mr-2"></i>{category}</p>
@@ -30,7 +30,7 @@ const BlogPreview = ({ title, description, date, category, tags, postType, link 
   {
     return (
       <div className="mb-8 border custom-border rounded-lg p-4 shadow-sm">
-        <a href={`/blog/${postType}/${link}`} className="text-lg font-noto hover:underline">{title}</a>
+        <a href={`/blog/${postType}/${link}`} className="text-lg hover:underline">{title}</a>
         <div className="flex items-center space-x-8 ml-1 mt-3 text-sm custom-gray">
             <p><i className="fa-solid fa-calendar mr-2"></i>{new Date(date).toLocaleString("en-GB", { dateStyle: "short"})}</p>
         </div>

@@ -1,17 +1,17 @@
 "use client";
 import Y2KHeader from "@/components/Y2KHeader";
+import { ReactNode } from 'react';
 
 interface Y2KLayoutProps {
   currentPage?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function Y2KLayout({ currentPage, children }: Y2KLayoutProps) {
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Y2KHeader currentPage={currentPage} />
-
-      <div>
+      <div className="flex-1 y2k-content">
         {children}
       </div>
     </div>

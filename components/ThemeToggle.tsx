@@ -1,6 +1,10 @@
 "use client";
 import { useTheme } from "next-themes";
-import { WindowsMyComputer2, AfterDarkDeluxe, VisualStudioSUN } from "react-old-icons";
+import {
+  VisualStudioLighton,
+  VisualStudioLightoff,
+  WindowsMy,
+} from 'react-old-icons';
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -42,18 +46,31 @@ const ThemeToggle = () => {
     }
   };
 
+  if (!isY2K) {
+    return (
+      <div className="flex items-center gap-2">
+        <button type="button" onClick={toggleStyle} className="theme-toggle-button">
+          <i className="fa-solid fa-computer" />
+        </button>
+        <button type="button" onClick={toggleDark} className="theme-toggle-button">
+          { isDark
+            ? <i className="fa-solid fa-moon" />
+            : <i className="fa-solid fa-sun" />
+          }
+        </button>
+      </div>
+    )
+  }
+
   return (
     <div className="flex items-center gap-2">
       <button type="button" onClick={toggleStyle} className="theme-toggle-button">
-        { isY2K
-          ? <WindowsMyComputer2 size={20} />
-          : <i className="fa-solid fa-computer" />
-        }
+        <WindowsMy size={20} />
       </button>
       <button type="button" onClick={toggleDark} className="theme-toggle-button">
-        { isY2K
-          ? isDark ? <AfterDarkDeluxe size={20} /> : <VisualStudioSUN size={20} />
-          : isDark ? <i className="fa-solid fa-moon" /> : <i className="fa-solid fa-sun" />
+        { isDark
+          ? <VisualStudioLightoff size={20} />
+          : <VisualStudioLighton size={20} />
         }
       </button>
     </div>

@@ -36,8 +36,8 @@ export default function ArchiveList() {
   });
 
   return (
-    <main className="w-full p-8 font-noto">
-      <h1 className="text-2xl font-noto-semibold mb-4">Archive</h1>
+    <main className="w-full p-8">
+      <h1 className="text-2xl mb-4">Archive</h1>
       <div className="space-y-4">
         {Object.keys(groupedPosts).map((year) => (
           <div key={year}>

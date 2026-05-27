@@ -42,7 +42,8 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-size: 0.875rem; 
+  font-size: 0.875rem;
+  font-family: 'Lora', 'Noto_Serif_SC', serif;
 }
 
 [data-theme*="dark"] body {
@@ -266,7 +267,6 @@ a:hover {
 
 [data-theme*="y2k"] header {
   font-family: "Fusion Pixel", monospace;
-  border: 2px solid currentColor;
   border-radius: 0;
 }
 

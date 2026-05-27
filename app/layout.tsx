@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "@/styles/globals.css";
-import Footer from "@/components/Footer";
 import { ThemeProvider } from "next-themes";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "@/styles/globals.css";
+import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
   title: {
@@ -25,26 +14,21 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel='shortcut icon' type='image/x-icon' href='icons/A.jfif' />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="flex justify-center items-center">
-          <div className="w-full max-w-225  md:w-full lg:w-2/3 flex flex-col mb-auto content-wrap ">
-            <ThemeProvider
-              attribute="data-theme"
-              defaultTheme="light-modern"
-              themes={["light-modern", "dark-modern", "light-y2k", "dark-y2k"]}
-            >
-              {children}
-              <Footer />
-            </ThemeProvider>
-          </div>
-        </div>
+      <body >
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="light-modern"
+          themes={["light-modern", "dark-modern", "light-y2k", "dark-y2k"]}
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

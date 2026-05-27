@@ -60,12 +60,12 @@ const config: Config = {
   			],
   			'noto-medium': [
   				'Lora-Medium',
-  				'Noto_Serif_SC-medium',
+  				'Noto_Serif_SC-Medium',
   				'serif'
   			],
   			'noto-semibold': [
   				'Lora-SemiBold',
-  				'Noto_Serif_SC-Semibold',
+  				'Noto_Serif_SC-SemiBold',
   				'serif'
   			],
   			'noto-bold': [

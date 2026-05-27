@@ -18,8 +18,8 @@ const Header = ({ currentPage }: HeaderProps) => {
   const linkClasses = (page: string) =>
     `hover:underline ${currentPage === page ? "underline custom-blue" : ""}`;
 
-return (
-    <header className="flex justify-between items-center p-3 px-4 font-lora font-bold shadow-md">
+  return (
+    <header className="flex justify-between items-center p-3 px-4 md:mt-4 mt-0 font-noto-bold shadow-md">
       <nav className="hidden md:flex items-center gap-6 ml-4">
       <Link href="/" className={linkClasses("home")}>Home</Link>
       <Link href="/blog" className={linkClasses("blog")}>Blog</Link>
@@ -50,12 +50,12 @@ return (
           className="p-2" 
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          { menuOpen ? <X size={20} /> : <Menu size={20} /> }
         </button>
       </div>
 
-      {menuOpen && (
-      <header className="absolute top-16 left-0 w-full shadow-lg flex flex-col items-center p-4 md:hidden">
+      { menuOpen && (
+      <header className="absolute top-16 left-0 z-50 w-full shadow-lg flex flex-col items-center p-4 md:hidden">
         <Link href="/" className="py-4 w-full text-center" onClick={() => setMenuOpen(false)}>Home</Link>
         <Link href="/blog" className="py-4 w-full text-center" onClick={() => setMenuOpen(false)}>Blog</Link>
         <Link href="/album" className="py-4 w-full text-center" onClick={() => setMenuOpen(false)}>Album</Link>

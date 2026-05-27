@@ -58,14 +58,14 @@ export default function BlogList() {
   const currentTitle = postTypePath === postsDirectory ? postsDirectoryTitle : diariesDirectoryTitle;
 
   return (
-    <main className="w-full p-8 font-noto">
+    <main className="w-full p-8">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-2xl font-noto-semibold">Blog</h1>
+        <h1 className="text-2xl">Blog</h1>
         <Select onValueChange={handlePostTypeChange} value={currentTitle}>
-          <SelectTrigger className="w-[130px]">
+          <SelectTrigger className="w-48">
             <SelectValue placeholder={currentTitle} />
           </SelectTrigger>
-          <SelectContent className="font-noto">
+          <SelectContent>
             {[postsDirectoryTitle, diariesDirectoryTitle].map((choice) => (
               <SelectItem key={choice} value={choice}>{choice}</SelectItem>
             ))}
