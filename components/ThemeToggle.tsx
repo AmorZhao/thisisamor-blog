@@ -1,4 +1,5 @@
 "use client";
+import { useRouter, usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import {
   VisualStudioLighton,
@@ -6,45 +7,30 @@ import {
   WindowsMy,
 } from 'react-old-icons';
 
+const Y2K_PREFIX = "/y2k";
+
+function toggleY2KPath(pathname: string): string {
+  if (pathname === Y2K_PREFIX || pathname.startsWith(`${Y2K_PREFIX}/`)) {
+    const rest = pathname.slice(Y2K_PREFIX.length);
+    return rest === "" ? "/" : rest;
+  }
+  return pathname === "/" ? Y2K_PREFIX : `${Y2K_PREFIX}${pathname}`;
+}
+
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
+  const router = useRouter();
 
   if (!theme) {
     return null;
   }
 
-  const isY2K = theme.includes("y2k");
-  const isDark = theme.includes("dark");
+  const isY2K = pathname.startsWith(Y2K_PREFIX);
+  const isDark = theme === "dark";
 
-  const toggleStyle = () => {
-    switch (theme) {
-      case "light-modern":
-        return setTheme("light-y2k");
-      case "dark-modern":
-        return setTheme("dark-y2k");
-      case "light-y2k":
-        return setTheme("light-modern");
-      case "dark-y2k":
-        return setTheme("dark-modern");
-      default:
-        return setTheme("light-modern");
-    }
-  };
-
-  const toggleDark = () => {
-    switch (theme) {
-      case "light-modern":
-        return setTheme("dark-modern");
-      case "dark-modern":
-        return setTheme("light-modern");
-      case "light-y2k":
-        return setTheme("dark-y2k");
-      case "dark-y2k":
-        return setTheme("light-y2k");
-      default:
-        return setTheme("light-modern");
-    }
-  };
+  const toggleStyle = () => router.push(toggleY2KPath(pathname));
+  const toggleDark = () => setTheme(isDark ? "light" : "dark");
 
   if (!isY2K) {
     return (

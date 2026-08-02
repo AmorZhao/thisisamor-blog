@@ -1,6 +1,5 @@
 @import url("./fonts.css");
 @import url("./markdown.css");
-@import url("./colors.css");
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
@@ -39,6 +38,11 @@
   --text-color: #000000;
 }
 
+[data-theme*="dark"] {
+  --background-color: #222;
+  --text-color: #fff;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -46,10 +50,11 @@ body {
   font-family: 'Lora', 'Noto_Serif_SC', serif;
 }
 
-[data-theme*="dark"] body {
-  background-color: #222;
-  color: #fff;
-  font-size: 0.875rem; 
+[data-theme="modern"] {
+  font-size: 100%;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 h1 {
@@ -212,10 +217,12 @@ a:hover {
 [data-theme*="y2k"] {
   --background-color: #f5f0e8;
   --text-color: #1a1a2e;
+  background-color: var(--background-color);
+  color: var(--text-color);
   transition: background-color 300ms ease, color 300ms ease;
 }
 
-[data-theme*="y2k"][data-theme*="dark"] {
+[data-theme*="dark"] [data-theme*="y2k"] {
   --background-color: #0d0d1a;
   --text-color: #c8ffc8;
 }
@@ -240,7 +247,7 @@ a:hover {
     --radius: 0rem;
   }
 
-  [data-theme*="y2k"][data-theme*="dark"] {
+  [data-theme*="dark"] [data-theme*="y2k"] {
     --background: 240 40% 8%;
     --foreground: 140 100% 90%;
     --card: 240 35% 12%;
@@ -260,7 +267,11 @@ a:hover {
   }
 }
 
-[data-theme*="y2k"] body,
+[data-theme*="y2k"] {
+  font-size: 125%;
+}
+
+[data-theme*="y2k"],
 [data-theme*="y2k"] .markdown-body {
   font-family: "Fusion Pixel", monospace;
 }
@@ -269,8 +280,3 @@ a:hover {
   font-family: "Fusion Pixel", monospace;
   border-radius: 0;
 }
-
-[data-theme*="y2k"] .custom-blue  { color: #2c5f8a; }
-[data-theme*="y2k"][data-theme*="dark"] .custom-blue { color: #7fd4ff; }
-[data-theme*="y2k"] .custom-gray  { color: #5a5a7a; }
-[data-theme*="y2k"][data-theme*="dark"] .custom-gray { color: #a0c0a0; }

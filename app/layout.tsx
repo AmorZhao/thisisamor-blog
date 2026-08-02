@@ -24,8 +24,9 @@ export default function RootLayout({
       <body >
         <ThemeProvider
           attribute="data-theme"
-          defaultTheme="light-modern"
-          themes={["light-modern", "dark-modern", "light-y2k", "dark-y2k"]}
+          defaultTheme="light"
+          themes={["light", "dark"]}
+          storageKey="site-theme"
         >
           {children}
         </ThemeProvider>
